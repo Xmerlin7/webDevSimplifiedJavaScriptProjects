@@ -1,10 +1,10 @@
-console.log("Starting")
-let FavouriteNumber = 3
+function identy(name, b) {
+    console.log("hello " + name + " u realy " + b + " years old !")
+}
+function func(x) {
+    let a = "youmn"
+    let b = 7
+    x((a, b))
+}
 
-console.log(FavouriteNumber)
-
-FavouriteNumber = 5
-
-console.log(FavouriteNumber)
-
-console.log("Finished")
+func (identy) 
