@@ -1,10 +1,10 @@
 console.log("Starting")
-setTimeout(() => {
-    console.log("First setTimeout")
-    setTimeout(() => {
-        console.log("Second setTimeout")
-        setTimeout(() => {
-            console.log("Third setTimeout")
-        }, 0)
-    }, 0)
-}, 0)
+let FavouriteNumber = 3
+
+console.log(FavouriteNumber)
+
+FavouriteNumber = 5
+
+console.log(FavouriteNumber)
+
+console.log("Finished")
