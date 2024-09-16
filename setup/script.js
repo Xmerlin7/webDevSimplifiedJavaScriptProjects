@@ -3,7 +3,7 @@
  * 
  * @function
  */
-function func(x, callback){
+function func(x, callback) {
     console.log(callback(x));
 }
-func(2, fn  => fn + 1 )
+func(2, variable => variable * 2);
