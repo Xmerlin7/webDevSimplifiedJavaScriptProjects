@@ -17,7 +17,3 @@ function setup(varaiable) {
 }
 let closure = setup(1)
 closure(2)
-a = function() {
-    console.log("Hello")
-}
-a()
