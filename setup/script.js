@@ -1,9 +1,23 @@
 /**
- * Function description here.
+ * @description: This is a function that returns another function.
+ * The inner function has access to the outer function's variables.
+ * This is called a closure that made me psyco.
  * 
  * @function
  */
-function func(x, callback) {
-    console.log(callback(x));
+function setup(varaiable) {
+
+    let c = 10
+    return function func(varaiable2) {
+        console.log(varaiable)
+        console.log(varaiable2)
+        console.log(c)
+
+    }
 }
-func(2, variable => variable * 2);
+let closure = setup(1)
+closure(2)
+a = function() {
+    console.log("Hello")
+}
+a()
