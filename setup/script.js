@@ -1,13 +1,11 @@
-let a = [1, 2, 3];
-let b = a;
-obj = {name: 'John'};
-obj2 = obj;
-changeValue(b, obj2);
-console.log(a); 
-
-
-console.log(obj)
-function changeValue(b, n) {
-    b[0] = 5;
-    n.name = 'Jane';
-}
+const items = [
+    {price: 10},
+    {price: 20},
+    {price: 30},
+    {price: 40},
+    {price: 50}
+];
+const total = items.reduce((sum, item) => {
+    return sum + item.price
+}, 0);
+console.log(total);
