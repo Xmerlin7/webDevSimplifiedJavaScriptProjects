@@ -9,9 +9,8 @@ form.addEventListener("submit", e => {
 
   // 1. Create a new item
     const item = document.createElement("div")
-    item.innerText = input.value
     item.classList.add("list-item")
-
+    item.innerText = input.value
   // 2. Add that item to the list
     list.appendChild(item)
 
