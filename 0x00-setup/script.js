@@ -1,4 +1,19 @@
-const arr = [1, 2, 3, 4, 5];
-arr.forEach(item => {
-    console.log(item);
-})
+let person = {
+    name: 'John',
+    friend: {
+        name: 'Chris',
+        friend: {
+            name: 'Matt'
+        }
+    }
+}
+let per = person
+function printFriends(pers) {
+    if (pers == null) {
+        return
+    }
+    console.log(pers.name)
+    pers = pers.friend
+    printFriends(pers)
+}
+printFriends(per)
