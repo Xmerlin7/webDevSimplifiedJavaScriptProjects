@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
+    <style>
+        div {
+            color: black;
+        }
+
+        div>div {
+            margin-left: 0.5rem;
+            padding-left: 0.25rem;
+            border-left: 1px solid black;
+        }
+    </style>
 </head>
+
 <body>
-    <button data-clicks="0">1</button>
-    <button data-clicks="0">2</button>
-    <button data-clicks="0">3</button>
-    <script src="script.js"></script>
-</body>
+    <div>
+        <div id="grandparent">
+            grandparent
+            <div id="parent">
+                parent 1
+                <div id="child">child 1</div>
+                <div id="child">child 2</div>
+            </div>
+            <div id="parent">
+                parent 2
+                <div id="child">child 3</div>
+                <div id="child">child 4</div>
+            </div>
+        </div>
+    </div>
+    </head>
+
+    <body>
+
+        <script src="script.js"></script>
+    </body>
+
 </html>
