@@ -1,22 +1,25 @@
-//! Select All Elements
-const form = document.querySelector('#new-item-form')
-const input = document.querySelector('#item-input')
-const list = document.querySelector('#list')
-//! When the user submit the form add the task to the list
+// 1. Select all elements
+const form = document.querySelector("#new-item-form")
+const list = document.querySelector("#list")
+const input = document.querySelector("#item-input")
 
-form.addEventListener('submit', e => {
-    e.preventDefault()
-    //?create Item which inserted in input
-    const item = document.createElement('div')
-    item.innerText = input.value
-    
-        //? add a new Item to the list
-    item.classList.add('list-item') 
+// 2. When I submit the form add a new element
+form.addEventListener("submit", e => {
+  e.preventDefault()
 
-    //? clear the input 
-    input.value = ''
-    //? remove the task if finished
-    item.addEventListener('click', () => {
-        item.remove()
-    })
+  // 1. Create a new item
+  const item = document.createElement("div")
+  item.innerText = input.value
+  item.classList.add("list-item")
+
+  // 2. Add that item to the list
+  list.appendChild(item)
+
+  // 3. Clear input
+  input.value = ""
+
+  // 4. Setup event listener to delete item when clicked
+  item.addEventListener("click", () => {
+    item.remove()
+  })
 })
