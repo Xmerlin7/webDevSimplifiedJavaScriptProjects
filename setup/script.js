@@ -1,11 +1,7 @@
-const form = document.querySelector('[data-form]');
-const link = document.querySelector('[data-link]');
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    console.log('form submitted');
-});
-
-link.addEventListener('click', (e) => {
-    e.preventDefault();
-    console.log('clicked');
+const test = document.querySelectorAll('button')
+test.forEach((button) => {
+    button.addEventListener('click', () => {
+        const currentClicks = parseInt(button.dataset.clicks);
+        button.dataset.clicks = currentClicks + 1;
+    });
 });
