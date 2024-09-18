@@ -8,18 +8,18 @@ form.addEventListener("submit", e => {
   e.preventDefault()
 
   // 1. Create a new item
-  const item = document.createElement("div")
-  item.innerText = input.value
-  item.classList.add("list-item")
+    const item = document.createElement("div")
+    item.innerText = input.value
+    item.classList.add("list-item")
 
   // 2. Add that item to the list
-  list.appendChild(item)
+    list.appendChild(item)
 
   // 3. Clear input
-  input.value = ""
+    input.value = ""
 
   // 4. Setup event listener to delete item when clicked
-  item.addEventListener("click", () => {
-    item.remove()
-  })
+    item.addEventListener("click", () => {
+      list.removeChild(item)
+    })
 })
