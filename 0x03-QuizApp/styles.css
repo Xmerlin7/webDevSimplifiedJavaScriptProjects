@@ -1,30 +1,30 @@
 .answer-item {
     list-style: lower-alpha;
-  }
-  
-  .question-item {
+}
+
+.question-item {
     margin-bottom: 2rem;
-  }
-  
-  .question-item.correct {
+}
+
+.question-item.correct {
     color: green;
-  }
-  
-  .question-item.incorrect {
+}
+
+.question-item.incorrect {
     color: red;
-  }
-  
-  .question-item:last-child {
+}
+
+.question-item:last-child {
     margin-bottom: 0;
-  }
-  
-  .alert-title {
+}
+
+.alert-title {
     font-weight: bold;
     margin-bottom: .5rem;
     font-size: 2rem;
-  }
-  
-  #alert {
+}
+
+#alert {
     font-size: 1.25rem;
     position: absolute;
     display: none;
@@ -36,8 +36,8 @@
     background-color: hsl(100, 80%, 80%);
     border-radius: .5rem;
     color: hsl(100, 80%, 20%);
-  }
-  
-  #alert.active {
+}
+
+#alert.active {
     display: block;
-  }
+}
