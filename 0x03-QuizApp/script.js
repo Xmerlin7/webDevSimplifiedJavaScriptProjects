@@ -9,7 +9,7 @@ const form = document.querySelector('#quiz-form');
 const answers = document.querySelectorAll('.answer');
 const btn = document.querySelector('button');
 const alertBox = document.querySelector('#alert');
-
+const pingo = 3
 btn.addEventListener('click', (e) => {
     e.preventDefault()
     let correct = 0;
@@ -29,11 +29,11 @@ btn.addEventListener('click', (e) => {
     })
     console.log(correct);
 
-    if (correct ===3) {
+    if (correct === pingo) {
         alertBox.classList.add('active');
         setTimeout(() => {
             alertBox.classList.remove('active');
-        }, 1000);
+        }, 2000);
     }
 })
 
