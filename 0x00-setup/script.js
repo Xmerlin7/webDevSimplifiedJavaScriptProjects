@@ -1,3 +1,4 @@
 setTimeout(() => {
     console.log('Hello from script.js');
-}, 1000);
+}, 5000);
+console.log('End of script.js');
