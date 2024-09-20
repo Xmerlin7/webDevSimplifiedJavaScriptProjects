@@ -1,5 +1,5 @@
 const button = document.getElementById('button');
-callback = () => {
+const callback = () => {
     alert('Button clicked');
 }
 function addClickEventListner(element, callback) {
