@@ -1,9 +1,11 @@
 function setTimePromise(time) {
     return new Promise((resolve, reject) => {
-        setTimeout(resolve, time);
+        setTimeout(resolve(`Waited for ${time} ms`)
+            , time);
     })
 }
-setTimePromise(1000)
-    .then(() => {
-        console.log('Hello World');
-    })
+async function setTime(time) {
+    const message = await setTimePromise(time);
+    console.log(message);
+}
+setTime(200);
