@@ -19,10 +19,14 @@ async function setTime(time) {
         console.log(message);
         message = await setTimePromiseError(time);
         console.log(message);
+        console.log('End after error');
         message = await setTimePromise(time);
         console.log(message);
     }catch (error) {
+        console.log(' hehe error');
         console.error(error);
+    }finally {
+        console.log('أنا محدش يقدر يوقفني');
     }
 }
 setTime(200);
