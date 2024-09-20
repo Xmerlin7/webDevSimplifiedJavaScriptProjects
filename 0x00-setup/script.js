@@ -1,4 +1,8 @@
-setTimeout(() => {
-    console.log('Hello from script.js');
-}, 5000);
-console.log('End of script.js');
+const button = document.getElementById('button');
+callback = () => {
+    alert('Button clicked');
+}
+function addClickEventListner(element, callback) {
+    element.addEventListener('click', callback);
+}
+addClickEventListner(button, callback);
