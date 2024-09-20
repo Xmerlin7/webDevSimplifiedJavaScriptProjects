@@ -1,6 +1,6 @@
 function setTimePromise(time) {
     return new Promise((resolve, reject) => {
-        setTimeout(reject(`Waited for ${time} ms`)
+        setTimeout(resolve(`Waited for ${time} ms`)
             , time);
     })
 }
@@ -11,9 +11,13 @@ function setTimePromiseError(time) {
             , time);
     })
 }
+
 async function setTime(time) {
     try {
+        console.log('Start before error');
         let message = await setTimePromise(time);
+        console.log(message);
+        message = await setTimePromiseError(time);
         console.log(message);
         message = await setTimePromise(time);
         console.log(message);
