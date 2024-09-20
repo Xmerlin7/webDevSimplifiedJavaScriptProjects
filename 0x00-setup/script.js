@@ -4,3 +4,11 @@
 
 // I will write the code to add the event listener to the button
 const button = document.querySelector('button');
+
+
+
+function addEventListenerPromise(element, event) {
+    return new Promise((resolve, reject) => {
+        element.addEventListener(event, resolve);
+    })
+}
