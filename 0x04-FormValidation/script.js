@@ -1,8 +1,19 @@
 // TODO: Select all elements needed
 //    Use the HTML to figure out what classes/ids will work best for selecting each element
-
+const form = document.querySelector('#form');
+const username = document.querySelector('#username');
+const password = document.querySelector('#password');
+const confirmPassword = document.querySelector('#password-confirmation');
+console.log(username)
 // TODO: Create an event listener for when the form is submitted and do the following inside of it.
+form.addEventListener('submit', e => {
+  e.preventDefault();
 //    TODO: Create an array to store all error messages and clear any old error messages
+  let errors = [];
+  
+  console.log(input);
+  
+});
 //    TODO: Define the following validation checks with appropriate error messages
 //      1. Ensure the username is at least 6 characters long
 //      2. Ensure the password is at least 10 characters long
