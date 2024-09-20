@@ -1,2 +1,9 @@
-let fifteen = Promise.resolve(15);
-fifteen.then(value => console.log(`Got ${value}`));
+function setTimePromise(time) {
+    return new Promise((resolve, reject) => {
+        setTimeout(resolve, time);
+    })
+}
+setTimePromise(1000)
+    .then(() => {
+        console.log('Hello World');
+    })
