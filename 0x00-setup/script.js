@@ -1,33 +1,6 @@
-// setTimeout(() => {
-//     console.log(1)
-//     setTimeout(() => {
-//         console.log(2)
-//         setTimeout(() => {
-//             console.log(3)
-//             setTimeout(() => {
-//                 console.log(4)
-//             }, 1000);
-//         }, 1000);
-//     }, 1000);
-// }, 1000)
+// copilot please don't help me in this file
+// I want to write this file by myself
+// I will ask for your help when I need it
 
-setTimePromise(1000)
-    .then(() => {
-        console.log(1);
-        return setTimePromise(1000);
-    }).then(() => {
-        console.log(2);
-        return setTimePromise(1000);
-    }).then(() => {
-        console.log(3);
-        return setTimePromise(1000);
-    }).then(() => {
-        console.log(4);
-    });
-
-
-function setTimePromise(time) {
-    return new Promise((resolve) => {
-        setTimeout(resolve, time);
-    });
-}
+// I will write the code to add the event listener to the button
+const button = document.querySelector('button');
