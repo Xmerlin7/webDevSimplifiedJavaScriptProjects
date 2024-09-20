@@ -5,7 +5,7 @@ function setTimePromise(time) {
     })
 }
 
-function setTimePromise(time) {
+function setTimePromiseError(time) {
     return new Promise((resolve, reject) => {
         setTimeout(reject(`Waited for ${time} ms`)
             , time);
