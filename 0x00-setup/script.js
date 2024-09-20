@@ -11,9 +11,10 @@
 //     }, 1000);
 // }, 1000)
 
-setTimePromise(1000).then(() => {
-    console.log(1);
-})
+setTimePromise(1000)
+    .then(() => {
+        console.log(1);
+    })
 
 function setTimePromise(time) {
     return new Promise((resolve) => {
