@@ -25,3 +25,4 @@ promise.then((message) => {
 }).catch((message) => {
     console.log('This is in the catch ' + message)
 })
+console.dir(promise)
