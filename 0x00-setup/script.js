@@ -1,28 +1,22 @@
-setTimeout(() => {
-    console.log(1)
-    setTimeout(() => {
-        console.log(2)
-        setTimeout(() => {
-            console.log(3)
-            setTimeout(() => {
-                console.log(4)
-            }, 1000);
-        }, 1000);
-    }, 1000);
-}, 1000)
+// setTimeout(() => {
+//     console.log(1)
+//     setTimeout(() => {
+//         console.log(2)
+//         setTimeout(() => {
+//             console.log(3)
+//             setTimeout(() => {
+//                 console.log(4)
+//             }, 1000);
+//         }, 1000);
+//     }, 1000);
+// }, 1000)
 
-const promise = new Promise((resolve, reject) => {
-    const sum = 1 
-    if (sum === 2){
-        resolve('Success')
-    }
-    else{
-        reject('Error')
-    }
+setTimePromise(1000).then(() => {
+    console.log(1);
 })
-promise.then((message) => {
-    console.log('This is in the then ' + message)
-}).catch((message) => {
-    console.log('This is in the catch ' + message)
-})
-console.dir(promise)
+
+function setTimePromise(time) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, time);
+    });
+}
