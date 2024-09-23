@@ -34,14 +34,14 @@
     margin-left: .5rem;
   }
 body {
-  background-color: #ffffff; /* Light background */
-  color: #000000; /* Dark text */
+  background-color: #ebebeb; /* Light background */
+  color: #151515; /* Dark text */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition between modes */
 }
 /* styles.css */
 body.dark {
-  background-color: #121212;
-  color: #ffffff;
+  background-color: #1f1e1e;
+  color: #ffc2c2;
 }
 
 button {
