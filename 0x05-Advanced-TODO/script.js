@@ -13,8 +13,13 @@ todoForm.addEventListener('submit', e => {
     e.preventDefault()
     const todoText = todoInput.value
     if (!todoText) return
-    renderTodo(todoText)
-    todos.push(todoText)
+    todoObj = {
+        text: todoText,
+        completed: false,
+        id: new Date().valueOf().toString()
+    }
+    renderTodo(todoObj)
+    todos.push(todoObj)
     saveTodos()
     todoInput.value = ''
 })
@@ -22,9 +27,10 @@ todoForm.addEventListener('submit', e => {
 function renderTodo(todoText) {
     const clone = todotemplate.content.cloneNode(true)
     const cloneText = clone.querySelector('[data-list-item-text]')
-    cloneText.innerText = todoText
+    const cloneList = clone.querySelector('.list-item')
+    cloneList.dataset.id = todoText.id
+    cloneText.innerText = todoText.text
     todoList.appendChild(clone)
-
 }
 
 // TODO: Save TODOS
