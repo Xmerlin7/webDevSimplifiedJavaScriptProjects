@@ -10,7 +10,7 @@ const TODO_KEY = `${KEY_PREFIX}-TODO`; // Corrected string interpolation
 
 todoForm.addEventListener('submit', e => {
     e.preventDefault();
-    const todoText = todoInput.value.trim(); // Trim input to avoid empty entries
+    const todoText = todoInput.value
     if (todoText === '') return; // Prevent adding empty todos
     todoInput.value = '';
     todos.push(todoText);
@@ -22,9 +22,12 @@ darkBtn.addEventListener('click', e => {
     e.preventDefault();
     document.body.classList.toggle('dark'); // Toggle the dark class on the body
 });
-todoList.appendChild(todotemplate)
 function renderTodo(todoName) {
-
+    const clone = todotemplate.content.cloneNode(true);
+    const nodeList = clone.querySelector('.list-item');
+    const list = nodeList.querySelector('[data-list-item-text]');
+    list.innerText = todoName;
+    todoList.appendChild(clone);
 }
 
 function saveTodo() {
