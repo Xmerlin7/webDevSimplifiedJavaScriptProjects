@@ -22,12 +22,9 @@ darkBtn.addEventListener('click', e => {
     e.preventDefault();
     document.body.classList.toggle('dark'); // Toggle the dark class on the body
 });
-
+todoList.appendChild(todotemplate)
 function renderTodo(todoName) {
-    const templateClone = todotemplate.content.cloneNode(true);
-    const textSpan = templateClone.querySelector('[data-list-item-text]');
-    textSpan.innerText = todoName;
-    todoList.appendChild(templateClone);
+
 }
 
 function saveTodo() {
