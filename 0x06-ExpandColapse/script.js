@@ -15,7 +15,9 @@ function toggleCardContent(button) {
     // Get the associated .card-body element
     const cardBody = button.parentElement.nextElementSibling;
 
-    // Toggle the 'show' class on the card body
+    //! The toggle() method returns true if the class was added /
+    //! (meaning the element is now expanded) and false if the class was removed
+    //! (meaning the element is now collapsed).
     const isExpanded = cardBody.classList.toggle('show');
 
     // Update button text based on the state
