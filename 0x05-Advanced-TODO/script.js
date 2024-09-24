@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const todoForm = document.querySelector('#new-todo-form');
 const todoList = document.querySelector('#list');
 const todoInput = document.querySelector('#todo-input');
@@ -8,7 +10,6 @@ const KEY_TODO = `${KEY_PREFIX}-KEY`;
 let todos = loadTodos();
 todos.forEach(renderTodo);
 
-// Event Listener: Add TODOS
 todoForm.addEventListener('submit', e => {
     e.preventDefault();
     const todoText = todoInput.value.trim(); // Trim to avoid empty strings with spaces
@@ -17,7 +18,7 @@ todoForm.addEventListener('submit', e => {
     const todoObj = {
         text: todoText,
         completed: false,
-        id: new Date().valueOf().toString() // Generate a unique ID
+        id: uuidv4()
     };
     
     todos.push(todoObj);
