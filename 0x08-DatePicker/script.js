@@ -5,5 +5,5 @@ dateBtn.addEventListener('click', e => {
     e.preventDefault()
     dateCard.classList.toggle('show')
     const today = new Date();
-    dateBtn.innerText = format(today, 'yyyy-MM-dd')
+    dateBtn.innerText = format(today, 'MMM do, yyyy')
 })
