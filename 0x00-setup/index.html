@@ -1,28 +1,45 @@
 <style>
-  .amazon-button {
-    background-color: rgb(250, 216, 20);
-    color: white;
+  :root {
+    --button-bg-color: rgb(250, 216, 20);
+    --button-bg-hover: rgb(230, 200, 20);
+    --button-text-color: white;
+    --button-height: 30px;
+    --button-padding: 10px;
+    --button-font-size: 10px;
+}
+
+.amazon-button {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
     border: none;
     width: 150px;
-    height: 30px;
-    /* Increased height for better usability */
+    height: var(--button-height);
     border-radius: 25px;
-    font-size: 10px;
-    /* Added font size */
-    padding: 10px;
-    /* Added padding for better spacing */
+    font-size: var(--button-font-size);
+    padding: var(--button-padding);
     cursor: pointer;
-    /* Changes cursor to pointer on hover */
     transition: background-color 0.3s;
-    /* Smooth transition for hover effect */
     font-weight: bold;
-    font-size: 10px;
-  }
+}
 
-  .amazon-button:hover {
-    background-color: rgb(196, 18, 18);
-    /* Darken color on hover */
-  }
+/* Hover effect */
+.amazon-button:hover {
+    background-color: var(--button-bg-hover);
+}
+
+/* Focus styles for accessibility */
+.amazon-button:focus {
+    outline: 2px solid rgb(50, 50, 50); /* Ensure visibility on focus */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .amazon-button {
+        width: 100%; /* Full width on smaller screens */
+        font-size: 12px; /* Slightly larger text */
+    }
+}
+
 </style>
 <button class="amazon-button">
   Add to Cart
