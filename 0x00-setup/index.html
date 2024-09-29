@@ -1,20 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Link in New Tab</title>
-</head>
-<body>
-    <p>Hello</p>
-    <button>Baa</button>
-    <a href="https://youtube.com/" id="youtubeLink">Youtube</a>
+<style>
+  .amazon-button {
+    background-color: rgb(224, 190, 0);
+    color: white;
+    border: none;
+    width: 110px;
+    height: 35px;
+    /* Increased height for better usability */
+    border-radius: 25px;
+    font-size: 10px;
+    /* Added font size */
+    padding: 10px;
+    /* Added padding for better spacing */
+    cursor: pointer;
+    /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+    font-weight: bold;
+    font-size: 10px;
+  }
 
-    <script>
-        document.getElementById("youtubeLink").addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent the default behavior
-            window.open(this.href, "_blank"); // Open the link in a new tab
-        });
-    </script>
-</body>
-</html>
+  .amazon-button:hover {
+    background-color: rgb(196, 18, 18);
+    /* Darken color on hover */
+  }
+</style>
+<button class="amazon-button">
+  Add to Cart
+</button>
