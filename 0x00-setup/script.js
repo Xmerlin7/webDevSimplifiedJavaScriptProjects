@@ -9,5 +9,4 @@ const obj = {
 }
 const { name: sa7by, age, address: { street } } = obj
 console.log(sa7by)
-
 console.log(street)
