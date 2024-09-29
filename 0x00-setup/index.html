@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Open Link in New Tab</title>
 </head>
-
 <body>
-    <script type="module" src="script.js"></script>
-    <div>
-        <button id='btn1'>Click 1</button>
-        <button id='btn2' style="margin-bottom: 4px;">Click 2</button>
-    </div>
-    <div>
-        <button id='btn3'>Click 3</button>
-        <button id='btn4' style="margin-bottom: 4px;">Click 4</button>
-    </div>
-</body>
+    <p>Hello</p>
+    <button>Baa</button>
+    <a href="https://youtube.com/" id="youtubeLink">Youtube</a>
 
+    <script>
+        document.getElementById("youtubeLink").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default behavior
+            window.open(this.href, "_blank"); // Open the link in a new tab
+        });
+    </script>
+</body>
 </html>
